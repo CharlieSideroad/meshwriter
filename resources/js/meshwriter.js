@@ -21,15 +21,15 @@ import { BABYLON } from "@babylonjs/core/Legacy/legacy"; //ERROR:export 'BABYLON
     Mesh,
 ];*/
 
-//import { MeshWriter } from "meshwriter"; //error: is not a funtion
+import {} from "meshwriter"; //error: is not a funtion// requierd --invoked controller
 //import {} from "meshwriter";
 import * as MeshWriter from "meshwriter";
 let Writer = MeshWriter(scene, { scale: 0.25 });
-let textMesh = new Writer("Hello World", {
+let textMesh = new Writer("Not Red", {
     //"font-family": "Arial",
     "letter-height": 30,
     "letter-thickness": 12,
-    //color: "#1C3870", //not working
+    //color: "#ff0000", //not working
     anchor: "center",
     position: {
         x: 0,
@@ -40,4 +40,4 @@ let textMesh = new Writer("Hello World", {
 let newMesh = textMesh.getSPS();
 newMesh.mesh.rotation = new Vector3(-1.57, 0, 0);
 newMesh.mesh.position = new Vector3(0, 0, 100);
-textMesh.color("#fcba03"); // not working*/
+//textMesh.color("#ff0000"); // not working

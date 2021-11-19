@@ -14,5 +14,4 @@ use App\Http\Controllers\WelcomeInController;
 |
 */
 
-//Route::get('/{any}', [WelcomeController::class,'index'])->where('any', '.*');
-Route::get('/{any?}', WelcomeInController::class);
+Route::get('/', WelcomeInController::class);
