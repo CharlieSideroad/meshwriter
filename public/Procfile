@@ -1,0 +1,37 @@
+web: vendor/bin/heroku-php-apache2 public/
+
+
+npm init -y        
+npm install
+on desktop>
+npm install --save-dev @babylonjs/core  // on desktop
+
+extra plugs>
+
+npm i -D query-string uuid jquery vue
+npm i -D vue 
+npm i -D vue-loader vue-template-compiler
+npm update
+
+vue changes:
+php artisan make:controller WelcomeController --invokable
+php artisan make:controller WelcomeController 
+create:
+    public function index()
+    {
+        return view('welcome');
+    }
+Route::get('/{any}', 'App\Http\Controllers\PagesController@index')->where('any', '.*');
+
+
+jsconfig.json  //root not public  use @ instead of ..//
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["resources/js/*"],
+            "@Components/*": ["resources/js/Components/*"]
+        }
+    },
+    "exclude": ["node_modules", "public"]
+}
